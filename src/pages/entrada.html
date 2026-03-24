@@ -1,0 +1,65 @@
+<div class="card">
+ <div class="card">
+  <div class="section-title" style="margin-top:0;">
+    <h2>Registrar entrada</h2>
+    <span class="badge gray">Preencha e confirme</span>
+  </div>
+
+  <div class="field" id="fieldEntradaPlaca">
+  <label>Placa</label>
+  <input id="entradaPlaca" type="text" placeholder="ABC-1234 ou ABC1D23" />
+  <div class="hint">Formatos aceitos: ABC-1234 (antigo) ou ABC1D23 (Mercosul)</div>
+  <div class="error" id="entradaPlacaErro">Placa inválida.</div>
+</div>
+    <div class="field">
+      <label>Modelo</label>
+      <input id="entradaModelo" type="text" placeholder="Ex: Gol, Onix, HB20..." />
+    </div>
+    <div class="field">
+      <label>Cor</label>
+      <input id="entradaCor" type="text" placeholder="Ex: Branco, Preto..." />
+    </div>
+  </div>
+
+  <div class="toolbar" style="margin-top:14px;">
+    <div class="left">
+      <span class="badge gray">MVP: dados salvos no localStorage</span>
+    </div>
+    <div class="right">
+      <button class="btn" id="btnLimparEntrada">Limpar</button>
+      <button class="btn primary" id="btnRegistrarEntrada">Registrar Entrada</button>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">
+  <h2>Saída</h2>
+  <span class="badge gray">Busque e finalize</span>
+</div>
+
+<div class="toolbar">
+  <div class="left search">
+    <div class="field" style="width:100%;">
+      <input id="saidaBuscaPlaca" type="text" placeholder="Digite a placa para buscar (ou deixe vazio p/ listar)..." />
+    </div>
+  </div>
+  <div class="right">
+    <span class="badge gray">Selecionada: <strong id="saidaSelecionada">—</strong></span>
+    <button class="btn" id="btnBuscarSaida">Buscar</button>
+    <button class="btn primary" id="btnFinalizarSaida">Finalizar Saída</button>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Placa</th>
+      <th>Modelo</th>
+      <th>Cor</th>
+      <th>Entrada</th>
+      <th>Tipo</th>
+      <th class="actions">Ações</th>
+    </tr>
+  </thead>
+  <tbody id="saidaBody"></tbody>
+</table>

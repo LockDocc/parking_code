@@ -1,0 +1,44 @@
+<div class="grid cards">
+  <div class="card">
+    <h3>Vagas Totais</h3>
+    <div class="value" id="cardTotal">20</div>
+    <div class="badge gray">Configuração inicial</div>
+  </div>
+
+  <div class="card">
+    <h3>Ocupadas</h3>
+    <div class="value" id="cardOcupadas">0</div>
+    <div class="badge blue">Em uso agora</div>
+  </div>
+
+  <div class="card">
+    <h3>Livres</h3>
+    <div class="value" id="cardLivres">0</div>
+    <div class="badge green">Disponível</div>
+  </div>
+
+  <div class="card">
+    <h3>Total do Dia</h3>
+    <div class="value" id="cardTotalDia">R$ 0,00</div>
+    <div class="badge gray">Somatório do histórico (hoje)</div>
+  </div>
+</div>
+
+<div class="section-title">
+  <h2>Veículos estacionados</h2>
+  <button class="btn small" data-action="reset-db">Reset dados</button>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Placa</th>
+      <th>Modelo</th>
+      <th>Cor</th>
+      <th>Entrada</th>
+      <th>Tipo</th>
+      <th class="actions">Ações</th>
+    </tr>
+  </thead>
+  <tbody id="dashEstacionadosBody"></tbody>
+</table>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistema de Estacionamento</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand__logo">P</div>
+      <div class="brand__text">
+        <strong>EstacionAqui</strong>
+        <span>Sistema</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <button class="menu__item" data-page="dashboard">Dashboard</button>
+      <button class="menu__item" data-page="entrada">Entrada / Saída</button>
+      <button class="menu__item" data-page="mensalistas">Mensalistas</button>
+      <button class="menu__item" data-page="historico">Histórico</button>
+      <button class="menu__item" data-page="config">Configurações</button>
+    </nav>
+
+    <div class="sidebar__footer">
+      <small>v0.1 • MVP UI</small>
+    </div>
+  </aside>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="topbar__left">
+        <h1 id="pageTitle">Dashboard</h1>
+        <p class="topbar__subtitle" id="pageSubtitle">Visão geral do estacionamento</p>
+      </div>
+
+      <div class="topbar__right">
+        <div class="chip">
+          <span class="dot"></span>
+          <span>Online</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="content" id="content"></section>
+  </main>
+  <!-- MODAL SAÍDA -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal__header">
+        <div>
+          <div class="modal__title">Confirmar saída</div>
+          <div class="modal__subtitle" id="modalSubtitle">Revise os dados antes de finalizar</div>
+        </div>
+        <button class="modal__close" id="btnModalClose" type="button">×</button>
+      </div>
+
+      <div class="modal__body">
+        <div class="modal__grid">
+          <div class="modal__item"><div class="k">Placa</div><div class="v" id="mPlaca">—</div></div>
+          <div class="modal__item"><div class="k">Tipo</div><div class="v" id="mTipo">—</div></div>
+          <div class="modal__item"><div class="k">Entrada</div><div class="v" id="mEntrada">—</div></div>
+          <div class="modal__item"><div class="k">Saída</div><div class="v" id="mSaida">—</div></div>
+          <div class="modal__item"><div class="k">Tempo</div><div class="v" id="mTempo">—</div></div>
+          <div class="modal__item"><div class="k">Valor</div><div class="v" id="mValor">—</div></div>
+        </div>
+
+        <div class="modal__calc" id="mCalcInfo"></div>
+      </div>
+
+      <div class="modal__footer">
+        <button class="btn" id="btnModalCancel" type="button">Cancelar</button>
+        <button class="btn primary" id="btnModalConfirm" type="button">Finalizar</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+
+
+</body>
+</html>

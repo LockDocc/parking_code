@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="section-title" style="margin-top:0;">
+    <h2>Configurações</h2>
+    <span class="badge gray">Vagas e preços</span>
+  </div>
+
+  <div class="form" style="grid-template-columns:repeat(4,minmax(180px,1fr));">
+    <div class="field">
+      <label>Vagas totais</label>
+      <input id="cfgVagas" type="number" min="1" placeholder="Ex: 20" />
+      <div class="hint">Quantidade total de vagas do estacionamento</div>
+    </div>
+
+    <div class="field">
+      <label>Tolerância (min)</label>
+      <input id="cfgTol" type="number" min="0" placeholder="Ex: 10" />
+      <div class="hint">Até esse tempo: R$ 0,00</div>
+    </div>
+
+    <div class="field">
+      <label>Valor 1ª hora (R$)</label>
+      <input id="cfgPrimeira" type="number" min="0" step="0.01" placeholder="Ex: 5" />
+      <div class="hint">Valor cobrado até 60 min</div>
+    </div>
+
+    <div class="field">
+      <label>Hora extra (R$)</label>
+      <input id="cfgExtra" type="number" min="0" step="0.01" placeholder="Ex: 2" />
+      <div class="hint">Cobrado por hora adicional (arredonda p/ cima)</div>
+    </div>
+  </div>
+
+  <div class="toolbar" style="margin-top:14px;">
+    <div class="left">
+      <span class="badge gray">As mudanças afetam novos cálculos de saída</span>
+    </div>
+    <div class="right">
+      <button class="btn" id="btnCfgPadrao">Restaurar padrão</button>
+      <button class="btn primary" id="btnCfgSalvar">Salvar</button>
+    </div>
+  </div>
+</div>
